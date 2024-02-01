@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Learn_basic;
+using Learn_basic.TruuTuong;
 
 namespace Learn_basic
 {
@@ -29,9 +30,13 @@ namespace Learn_basic
             thucHanh th = new thucHanh(100);
             th.ShowPrice();
             th.OderAction(36);
-        
-        
-          
+
+            Console.WriteLine("====================================");
+            Animal animal = new Cat();
+            animal.showInFo();
+
+
+
 
         }
         
