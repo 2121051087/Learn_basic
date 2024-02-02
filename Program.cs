@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Learn_basic;
+using Learn_basic.Generic;
 using Learn_basic.TruuTuong;
 
 namespace Learn_basic
@@ -32,10 +34,16 @@ namespace Learn_basic
             th.OderAction(36);
 
             Console.WriteLine("====================================");
-            Animal animal = new Cat();
-            animal.showInFo();
-
-
+            Animal Cat1  = new Cat();
+            Cat1.showInFo();
+            Console.WriteLine("       --------------------------");
+            Animal Dog1 = new Dog();
+            Dog1.showInFo();
+            Console.WriteLine("====================================");
+            haha objTest = new haha();
+            Console.WriteLine("====================================");
+            khuon<double> myObj = new khuon<double>(23.45);
+            myObj.methodParameter(35);
 
 
         }

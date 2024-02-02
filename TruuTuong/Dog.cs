@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace Learn_basic.TruuTuong
 {
-     class Cat : Animal
+    internal class Dog : Animal
     {
-        public Cat()
+        public Dog()
         {
-            Console.WriteLine(@"     Mèo");
-            
+            Console.WriteLine(@"       Chó");
         }
         public override void SoChan()
         {
             Console.WriteLine("So chan : 4 ");
-          
+
         }
         public override void Noi()
         {
-            Console.WriteLine("Tieng keu : Mew Mew");
+            Console.WriteLine("Tieng keu :Gau Gau");
         }
         public override void Loai()
         {
-            Console.WriteLine("Loai : Meo nha");
+            Console.WriteLine("Loai : Cho nha");
         }
 
         public override void MauLong()
         {
-            Console.WriteLine("Mau Long  : Xam ");
+            Console.WriteLine("Mau Long  : White ");
         }
     }
 }
+    
