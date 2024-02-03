@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Learn_basic
+namespace Learn_basic.Interface
 {
     interface GiaoDien
     {
@@ -17,7 +17,7 @@ namespace Learn_basic
 
     class thucHanh : GiaoDien, IOrder
     {
-         double price = 1000;
+        double price = 1000;
         public thucHanh(double price)
         {
             this.price = price;

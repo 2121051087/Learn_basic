@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Learn_basic
+namespace Learn_basic.KeThua
 {
     internal class Product
     {
@@ -16,7 +16,7 @@ namespace Learn_basic
         }
         public void TestProduct()
         {
-            this.ProductInfo();
+            ProductInfo();
         }
 
     }

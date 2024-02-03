@@ -4,8 +4,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using Learn_basic;
+using Learn_basic.DaHinh;
 using Learn_basic.Generic;
+using Learn_basic.Interface;
+using Learn_basic.KeThua;
 using Learn_basic.TruuTuong;
 
 namespace Learn_basic
@@ -45,7 +47,9 @@ namespace Learn_basic
             khuon<double> myObj = new khuon<double>(23.45);
             myObj.methodParameter(35);
 
-
+            Console.WriteLine("====================================");
+            toan toanObj = new toan();
+            toanObj.nhan(3.3f,4.4f);
         }
         
     }

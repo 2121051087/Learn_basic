@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Learn_basic
+namespace Learn_basic.TruuTuong
 {
     abstract class Category
     {
@@ -14,7 +14,7 @@ namespace Learn_basic
         public abstract void CategoryInfo();
         public void TestCategory()
         {
-            this.CategoryInfo();
+            CategoryInfo();
         }
     }
 
@@ -28,8 +28,8 @@ namespace Learn_basic
 
         public override void CategoryInfo()
         {
-           Console.WriteLine($"Loai san pham :{nameProduct}");
-           Console.WriteLine($"so luong san pham : {countNumberProduct}");
+            Console.WriteLine($"Loai san pham :{nameProduct}");
+            Console.WriteLine($"so luong san pham : {countNumberProduct}");
 
         }
     }
