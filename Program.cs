@@ -5,6 +5,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Learn_basic.DaHinh;
+using Learn_basic.Delegate;
+using Learn_basic.Event;
 using Learn_basic.Generic;
 using Learn_basic.Interface;
 using Learn_basic.KeThua;
@@ -15,43 +17,39 @@ namespace Learn_basic
 
     public class Program
     {
-       
-        static void Main(string[] args)
-        {
-         
-            Product p2 = new Iphone();
-            p2.TestProduct();
-            Console.WriteLine("====================================");
-            Category c1 = new SamSung();
-            c1.TestCategory();
-            thucHanh th1 = new thucHanh(100);
-            th1.ShowPrice();
-            th1.OderAction(36);
 
-            Console.WriteLine("====================================");
-            Category c2 = new LapTop();
-            c2.TestCategory();
-            thucHanh th = new thucHanh(100);
-            th.ShowPrice();
-            th.OderAction(36);
+        public delegate int TinhToan(int a, int b);
+        public static void Main(string[] args){
+            Func<int, int, int> tinhTong1 = (int x, int y) =>
+            {
+                return x + y;
+            };
+            Action<int> thongbao = (int vl) =>
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(vl);
+                
+            };
 
-            Console.WriteLine("====================================");
-            Animal Cat1  = new Cat();
-            Cat1.showInFo();
-            Console.WriteLine("       --------------------------");
-            Animal Dog1 = new Dog();
-            Dog1.showInFo();
-            Console.WriteLine("====================================");
-            haha objTest = new haha();
-            Console.WriteLine("====================================");
-            khuon<double> myObj = new khuon<double>(23.45);
-            myObj.methodParameter(35);
+            int kq1 = tinhTong1(5, 6);
+            int kq2 = tinhTong1(2, 22);
 
-            Console.WriteLine("====================================");
-            toan toanObj = new toan();
-            toanObj.nhan(3.3f,4.4f);
+            thongbao(kq1);
+            thongbao(kq2);
+
+            Publisher p = new Publisher();
+            TestEvent tEventObj = new TestEvent();
+            SubscriberA aEvent = new SubscriberA();
+            SubscriberB bEvent = new SubscriberB();
+
+            tEventObj.Sub(p);
+            aEvent.Sub(p);
+            bEvent.Sub(p);
+            p.Send();
+            Console.ResetColor();
+            
+           
         }
-        
     }
 
 

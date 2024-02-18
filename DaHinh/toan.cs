@@ -20,6 +20,13 @@ namespace Learn_basic.DaHinh
             int result = d * c;
             Console.Write("nhan 2 so nguyen co ket qua: "+ result);
             return result;
+        }  
+        public float chia(float d , float c)
+        {
+            float result = d / c;
+            Console.Write("chia 2 so thuc co ket qua: "+ result);
+            return result;
         }
+       
     }
 }
