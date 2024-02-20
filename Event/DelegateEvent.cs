@@ -9,13 +9,13 @@ namespace Learn_basic.Event
     public class Publisher
     {
         public delegate void NotifyNews(object data);
-        public NotifyNews event_new;
+        public event NotifyNews event_new;
         public void Send()
         {
             event_new?.Invoke("co tin moi");
         }
     }
-    public class TestEvent
+    public class DelegateEvent
     {
         public void Sub (Publisher p)
         {
@@ -24,20 +24,20 @@ namespace Learn_basic.Event
         }
         void ReceiverFromPublisher(object data)
         {
-            Console.WriteLine("Subscriber :" + data.ToString());
+            Console.WriteLine("- TestEvent : " + data.ToString());
         }
     }
     public class SubscriberA
     {
         public void Sub(Publisher p)
         {
-            p.event_new = null;
+            
             p.event_new += ReceiverFromPublisher;
 
         }
         void ReceiverFromPublisher(object data)
         {
-            Console.WriteLine("Subcriber :" + data.ToString());
+            Console.WriteLine("- SubcriberA : " + data.ToString());
         }
 
     }
@@ -45,13 +45,13 @@ namespace Learn_basic.Event
     {
         public void Sub(Publisher p)
         {
-            p.event_new = null;
+            
             p.event_new += ReceiverFromPublisher;
         }
 
         void ReceiverFromPublisher(object data)
         {
-            Console.WriteLine("- SubscriberB :" + data.ToString());
+            Console.WriteLine("- SubscriberB : " + data.ToString());
         }
     }
 }

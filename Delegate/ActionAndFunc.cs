@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Learn_basic.Delegate
 {
-    internal class actionAndFuction
+    internal class ActionAndFunc
     {
         public delegate void ShowLog(string message);
         static public void Info(string s)
